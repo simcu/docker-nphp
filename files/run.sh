@@ -1,3 +1,5 @@
 #!/bin/sh
 php-fpm
-nginx -g "daemon off;"
+nginx
+tail -f /var/log/nginx/access.log &
+tail -f /var/log/nginx/error.log
